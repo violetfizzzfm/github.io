@@ -1,0 +1,21 @@
+//
+// bootstrap-clockpicker
+// --------------------------------------------------
+// フォームを拡張するJavaScript「bootstrap-colorpicker」の標準のスタイルをサイトに合わせて調整
+// ENTRYの「ご希望の時間」部分のUIなどで使用
+// --------------------------------------------------
+.clockpicker-canvas-bg ,
+.clockpicker-canvas-bg-trans {
+  fill: rgba($brand-primary, .25);
+}
+.clockpicker-canvas-bearing,
+.clockpicker-canvas-fg {
+  fill: rgba($brand-primary, 1);
+}
+.clockpicker-canvas line {
+  stroke: rgba($brand-primary, .5);
+}
+.clockpicker-tick.active,
+.clockpicker-tick:hover {
+  background-color: rgba($brand-primary, .15);
+}

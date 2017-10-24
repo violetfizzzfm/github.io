@@ -1,0 +1,21 @@
+//
+// Drawer
+// --------------------------------------------------
+// サイドからナビゲーションを出すためのJavaScript「Drawer」の標準のスタイルサイトに合わせて調整
+// --------------------------------------------------
+
+
+// drawer-hamberger btn
+// -------------------------
+// 画面右下に固定表示されているナビゲーションを展開するためのボタン用のクラス
+// -------------------------
+.drawer-hamberger {
+  width: $base-size * 1.5;
+  height: $base-size * 1.5;
+  padding: $base-size / 3;
+  @media (min-width: $screen-sm-min) {
+    width: $base-size * 2;
+    height: $base-size * 2;
+    padding: $base-size / 2;
+  }
+}

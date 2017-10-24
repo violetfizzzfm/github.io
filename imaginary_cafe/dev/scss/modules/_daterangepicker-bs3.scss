@@ -1,0 +1,26 @@
+//
+// daterangepicker-bs3
+// --------------------------------------------------
+// フォームを拡張するJavaScript「daterangepicker-bs3」の標準のスタイルをサイトに合わせて調整
+// ENTRYの「ご希望の日程」部分で使用
+// --------------------------------------------------
+.daterangepicker {
+    padding: 10px;
+}
+.daterangepicker .ranges li {
+  color: $brand-primary;
+}
+.daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
+  background: $brand-primary;
+  border: 1px solid $brand-primary;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+.daterangepicker td.in-range {
+  background: rgba($brand-primary, 0.1);
+}
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+  background: rgba($brand-primary, 0.3);
+}

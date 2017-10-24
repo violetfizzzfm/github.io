@@ -1,0 +1,137 @@
+//
+// Typography
+// --------------------------------------------------
+// タイポグラフィに関するクラス
+// --------------------------------------------------
+
+
+// Headings (default)
+// -------------------------
+// Bootstrap標準のh1~h4（.h1~.h4）のスタイルをサイトに合わせて調整
+// -------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: $base-size / 2;
+  margin-bottom: $base-size / 2;
+  small, .small {
+    font-weight: inherit;
+  }
+}
+h1, .h1 {
+  font-size: floor(($font-size-h1 * .7));
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-h1;
+  }
+}
+h2, .h2 {
+  font-size: floor(($font-size-h2 * .75));
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-h2;
+  }
+}
+h3, .h3 {
+  font-size: floor(($font-size-h3 * .8));
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-h3;
+  }
+}
+h4, .h4 {
+  font-size: floor(($font-size-h4 * .8));
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-h4;
+  }
+}
+
+
+// Body text
+// -------------------------
+// Bootstrap標準のpタグのスタイルをサイトに合わせて調整
+// -------------------------
+p {
+  margin: 0 0 1em;
+}
+
+
+// lead
+// -------------------------
+// Bootstrap標準の「.lead」のスタイルをサイトに合わせて調整
+// 各セクションのディスクリプションなどに使用（CASTというタイトルの下の文章など）
+// -------------------------
+.lead {
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.3);
+  }
+}
+
+
+// Font Family
+// -------------------------
+// サイト内で使用するWebFont用のクラス
+// OUR WORKSのタブなどで使用
+// -------------------------
+.font-oswald {
+  font-family: $font-family-oswald;
+}
+.font-niconne {
+  font-family: $font-family-niconne;
+}
+
+
+// Font Color
+// -------------------------
+// 文字色を白くするクラス
+// ABOUTやSCHEDULEの本文などで使用
+// -------------------------
+.text-white {
+    color: #fff;
+}
+
+
+// demo-section-title
+// -------------------------
+// 各セクションの見出し用のスタイル
+// 各セクションの見出しなどに使用
+// -------------------------
+.demo-section-title {
+  font-family: $headings-font-family;
+  font-size: $font-size-h1;
+  font-weight: 300;
+  padding-bottom: $base-size;
+  text-align: center;
+  position: relative;
+  @media(min-width: $screen-sm-min) {
+    font-size: $font-size-h1 * 1.5;
+  }
+  &:before {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 5px;
+    background: #7f7f7f;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    opacity: .5;
+  }
+  &.is-white {
+    color: #fff;
+    &:before {
+      background: rgba(#fff,.5);
+    }
+  }
+  &.is-noBorder {
+    @media(min-width: $screen-md-min) {
+      text-align: left;
+      padding-bottom: 0;
+    }
+    &:before {
+      @media(min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+  }
+}
+
+

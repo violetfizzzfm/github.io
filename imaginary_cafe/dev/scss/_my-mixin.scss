@@ -1,0 +1,39 @@
+// button-solid-shadow
+// -------------------------
+// 各ボタンにシャドウを付けるためのmixin
+// _buttons.scssなどで使用
+// -------------------------
+@mixin button-solid-shadow($border) {
+  box-shadow: 0 $btn-solid-shadow-width 0 $border;
+  margin-bottom: $btn-solid-shadow-width;
+  &:hover {
+    box-shadow: 0 $btn-solid-shadow-width 0 $border, 0 $btn-solid-shadow-width 10px rgba($gray-base, .3);
+  }
+}
+
+
+// grid other
+// -------------------------
+// Bootstrapのgrid用のセレクタをすべて出力するためのmixin
+// _grid.scssでグリッドのpaddingを0にするクラスを定義する際に使用
+// -------------------------
+@mixin make-grid-columns-other($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from 1 through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    @content;
+  }
+}
+
+
+// Form control focus state
+// -------------------------
+// フォーカスされた際にbox-shadowをなしにするmixin
+// _forms.scssの「.form-control」で使用
+// -------------------------
+@mixin form-control-focus($color: $input-border-focus) {
+  &:focus {
+    @include box-shadow(none);
+  }
+}

@@ -1,0 +1,106 @@
+//
+// Block
+// --------------------------------------------------
+// blockに関するクラス
+// --------------------------------------------------
+
+
+// demo-frame
+// -------------------------
+// 各セクションを包括するフレーム用のクラス
+// 各セクションに使用
+// -------------------------
+.demo-frame1,
+.demo-frame2,
+.demo-frame3,
+.demo-frame4 {
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+// demo-frame1
+.demo-frame1 {
+  background: #fff;
+}
+// demo-frame2
+.demo-frame2 {
+  background-image: url("assets/images/puin.jpg");
+}
+// demo-frame3
+.demo-frame3 {
+  background-image: url("assets/images/puin.jpg");
+}
+// demo-frame4
+.demo-frame4 {
+  background: #f5f5f5;
+}
+
+
+// block / margin
+// -------------------------
+// 上下marginを調整するためのクラス
+// SCHEDULEのテーブル、CASTのサムネイル全体の余白を調整するためなどに使用
+// -------------------------
+.block-lg {
+  margin-top: $base-size * 1.5;
+  margin-bottom: $base-size * 1.5;
+  @media (min-width: $screen-sm-min) {
+    margin-top: $base-size * 3;
+    margin-bottom: $base-size * 3;
+  }
+}
+.block-md {
+  margin-top: $base-size;
+  margin-bottom: $base-size;
+  @media (min-width: $screen-sm-min) {
+    margin-top: $base-size * 2;
+    margin-bottom: $base-size * 2;
+  }
+}
+.block-sm {
+  margin-top: $base-size / 1.5;
+  margin-bottom: $base-size / 1.5;
+  @media (min-width: $screen-sm-min) {
+    margin-top: $base-size;
+    margin-bottom: $base-size;
+  }
+}
+.block-xs {
+  margin-top: $base-size / 2;
+  margin-bottom: $base-size / 2;
+}
+
+
+// block / padding
+// -------------------------
+// 上下paddingを調整するためのクラス
+// 各セクションに使用
+// -------------------------
+.block-padding-lg {
+  padding-top: $base-size * 1.5;
+  padding-bottom: $base-size * 1.5;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $base-size * 3;
+    padding-bottom: $base-size * 3;
+  }
+}
+.block-padding-md {
+  padding-top: $base-size;
+  padding-bottom: $base-size;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $base-size * 2;
+    padding-bottom: $base-size * 2;
+  }
+}
+.block-padding-sm {
+  padding-top: $base-size / 1.5;
+  padding-bottom: $base-size / 1.5;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $base-size;
+    padding-bottom: $base-size;
+  }
+}
+.block-padding-xs {
+  padding-top: $base-size / 2;
+  padding-bottom: $base-size / 2;
+}

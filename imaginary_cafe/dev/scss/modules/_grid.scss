@@ -1,0 +1,52 @@
+//
+// Grid
+// --------------------------------------------------
+// グリッドに関するクラス
+// --------------------------------------------------
+
+
+// grid no padding
+// -------------------------
+// Bootstrap標準のグリッドの左右に設定されているpaddingを0にするクラス
+// OUR WORkの画像のレイアウトに使用
+// -------------------------
+.row-nopadding {
+  @include clearfix();
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  // _my-mixin.scss
+  @include make-grid-columns-other {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+// grid inlineblock
+// -------------------------
+// Bootstrap標準のグリッドを上下中央並びにするクラス
+// SESSIONSの本文と画像のレイアウトに使用
+// -------------------------
+.row-inlineblock {
+  @extend .row;
+  font-size: 0;
+  @for $i from 1 through $grid-columns {
+    .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
+      float: none;
+      font-size: $font-size-base;
+      vertical-align: middle;
+    }
+    .col-xs-#{$i} {
+      display: inline-block;
+    }
+    @media (min-width: $screen-sm-min) {
+      .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+

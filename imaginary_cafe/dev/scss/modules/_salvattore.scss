@@ -1,0 +1,23 @@
+//
+// Salvattore
+// --------------------------------------------------
+// 高さの異なるパネルをレンガ状に配置するJavaScript「Salvattore」の設定
+// OUR WORKSの画像のレイアウトで使用
+// --------------------------------------------------
+
+
+@media screen and (min-width: 1px) and (max-width: $screen-xs-max){
+    [data-columns]::before {
+        content: '1 .col-xs-12';
+    }
+}
+@media screen and (min-width:$screen-sm-min) and (max-width: $screen-sm-max){
+    [data-columns]::before {
+        content: '2 .col-sm-6';
+    }
+}
+@media screen and (min-width:$screen-md-min) and (max-width: 9999px){
+    [data-columns]::before {
+        content: '3 .col-md-4';
+    }
+}

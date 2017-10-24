@@ -1,0 +1,125 @@
+//
+// Navbar
+// --------------------------------------------------
+// Navbarに関するクラス
+// --------------------------------------------------
+
+
+// demo-header
+// -------------------------
+// Bootstrap標準のヘッダーをサイトに合わせて調整するためのクラス
+// ページ上部に固定表示されるヘッダーに使用
+// -------------------------
+.demo-header {
+  transition: .3s;
+  &.navbar-default {
+    border: none;
+    margin-bottom: 0;
+    background: none;
+    .container {
+      padding: 0 $base-size * 0.5 0;
+      @media(min-width: $screen-md-min) {
+        padding: $base-size $base-size * 0.5 0;
+      }
+    }
+    .nav.navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
+      background: rgba($gray-base,.9);
+      @media(min-width: $screen-sm-min) {
+        background: none;
+      }
+    }
+    .nav.navbar-nav>li>a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .navbar-header {
+      margin-top: 0;
+      margin-bottom: 0;
+      @media(min-width: $screen-sm-min) {
+        margin-bottom: $base-size * 0.5;
+      }
+    }
+    .navbar-brand {
+      height: auto;
+      margin-right: $base-size;
+      @media(min-width: $screen-sm-min) {
+        margin-top: 0;
+      }
+      @media(min-width: $screen-md-min) {
+        margin-top: $base-size * -0.5;
+      }
+    }
+    .navbar-collapse {
+      max-height: none;
+      border: none;
+      box-shadow: none;
+    }
+    .navbar-collapse .navbar-nav {
+      @media(min-width: $screen-sm-min) {
+        margin-top: $base-size * 0.3;
+        margin-right: -$base-size;
+      }
+      @media(min-width: $screen-md-min) {
+        margin-top: $base-size * -0.2;
+      }
+      a {
+        &:hover {
+          background: rgba(#fff,.2);
+        }
+      }
+    }
+    .navbar-toggle {
+      margin-right: 0;
+      margin-top: $base-size * 0.5;
+      &:hover {
+        background: none;
+      }
+      .icon-bar {
+        background: #fff;
+      }
+    }
+  }
+  &.is-black {
+    background: $gray-darker;
+    .navbar-collapse .navbar-nav {
+      a {
+        &:hover {
+          background: rgba(#fff, .1);
+        }
+      }
+    }
+  }
+}
+
+
+// navber toggle btn
+// -------------------------
+// Bootstrap標準のナビを展開するためのクラス「.navbar-toggle」をサイトに合わせて調整
+// 小さいスクリーンサイズの際に隠れるナビを展開するためのボタンに使用
+// -------------------------
+.navbar-toggle {
+  height: 33px;
+  .icon-bar {
+    width: 20px;
+    height: 1px;
+    transition: .3s;
+    & + .icon-bar {
+      margin-top: 5px;
+    }
+    .is-show & {
+      transform: rotate(-45deg);
+      margin-top: 0;
+    }
+    .is-show & + .icon-bar {
+      transform: rotate(45deg);
+    }
+    .is-show & + .icon-bar + .icon-bar {
+      display: none;
+    }
+  }
+}

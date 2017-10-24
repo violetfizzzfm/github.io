@@ -1,0 +1,51 @@
+//
+// Navs
+// --------------------------------------------------
+// ナビに関するクラス
+// --------------------------------------------------
+
+
+// Tabs
+// -------------------------
+// Bootstrap標準のタブ用のクラス「.nav-tabs」をサイトに合わせて調整
+// OUR WORKSのタブで使用
+// -------------------------
+.nav-tabs {
+  &.is-simple {
+    border: none;
+    > li {
+
+      float: none;
+      display: inline-block;
+
+      // Actual tabs (as links)
+      > a {
+        display: inline-block;
+        padding: 0;
+        border: none;
+        &:hover {
+          background: none;
+        }
+      }
+      &:before {
+        content: '/';
+        display: inline-block;
+        margin: 0 15px;
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      // Active state, and its :hover to override normal :hover
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+}

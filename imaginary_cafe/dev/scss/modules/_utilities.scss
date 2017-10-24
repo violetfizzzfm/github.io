@@ -1,0 +1,130 @@
+//
+// Utility classes
+// --------------------------------------------------
+// 各コンポーネントの調整を行うためのクラス
+// --------------------------------------------------
+
+
+// Center-block
+// -------------------------
+// Bootstrap標準の要素を中央に配置するクラス「.center-block」にfloatの解除も追加
+// キービジュアルのENTRYボタン、CASTの画像、SESSIONSのアイコン、SCHEDULEのテーブル、OUR WORKボタンなどで使用
+// -------------------------
+.center-block {
+  float: none;
+}
+
+
+// Hover
+// -------------------------
+// ホバーした際にアニメーションしながら透明度を変更するクラス
+// OUR WORKの画像などで使用
+// -------------------------
+.img-opacity {
+  transition: opacity .3s;
+  a:hover & {
+    opacity: .7;
+  }
+}
+
+
+// Margin
+// -------------------------
+// タグやクラスなどに設定されているmarginを上書きするクラス($base-size=30px)
+// lg=45px md=15px sm=10px
+// -------------------------
+.mt-lg {
+  margin-top: $base-size * 1.5 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-top: $base-size * 2 !important;
+  }
+}
+.mt-md {
+  margin-top: $base-size / 2 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-top: $base-size !important;
+  }
+}
+.mt-sm {
+  margin-top: $base-size / 3 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-top: $base-size / 2 !important;
+  }
+}
+.mb-lg {
+  margin-bottom: $base-size * 1.5 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-bottom: $base-size * 2 !important;
+  }
+}
+.mb-md {
+  margin-bottom: $base-size / 2 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-bottom: $base-size !important;
+  }
+}
+.mb-sm {
+  margin-bottom: $base-size / 3 !important;
+  @media(min-width: $screen-sm-min) {
+    margin-bottom: $base-size / 2 !important;
+  }
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+
+// Padding
+// -------------------------
+// タグやクラスなどに設定されているpaddingを上書きするクラス($base-size=30px)
+// lg=45px md=15px sm=10px
+// -------------------------
+.pt-lg {
+  padding-top: $base-size * 1.5 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-top: $base-size * 2 !important;
+  }
+}
+.pt-md {
+  padding-top: $base-size / 2 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-top: $base-size !important;
+  }
+}
+.pt-sm {
+  padding-top: $base-size / 3 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-top: $base-size / 2 !important;
+  }
+}
+.pb-lg {
+  padding-bottom: $base-size * 1.5 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-bottom: $base-size * 2 !important;
+  }
+}
+.pb-md {
+  padding-bottom: $base-size / 2 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-bottom: $base-size !important;
+  }
+}
+.pb-sm {
+  padding-bottom: $base-size / 3 !important;
+  @media(min-width: $screen-sm-min) {
+    padding-bottom: $base-size / 2 !important;
+  }
+}
+.pt-0 {
+  padding-top: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+
+
+

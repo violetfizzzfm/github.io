@@ -1,0 +1,10 @@
+//
+// bootstrap-switch
+// --------------------------------------------------
+// フォームを拡張するJavaScript「bootstrap-switch」の標準のスタイルをサイトに合わせて調整
+// ENTRYの「メールマガジン」部分のボタンで使用
+// --------------------------------------------------
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  background: $btn-primary-bg;
+}

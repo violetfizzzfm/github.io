@@ -1,0 +1,119 @@
+//
+// Buttons
+// --------------------------------------------------
+// ボタンに関するクラス
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+// Bootstrap標準のボタン用のクラス「.btn」のスタイルをサイトに合わせて調整
+// サイト全体のボタンに使用
+// --------------------------------------------------
+.btn {
+  position: relative;
+  font-family: $font-family-oswald;
+  transition: .3s;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-large, $line-height-base, $border-radius-base);
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    box-shadow: inset 0 $btn-solid-shadow-width 5px rgba($gray-base, .125) !important;
+    top: $btn-solid-shadow-width;
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+// Bootstrap標準のボタンにシャドウを追加
+// サイト全体のボタンに使用
+// --------------------------------------------------
+.btn-default {
+  @include button-solid-shadow($btn-default-border);
+}
+.btn-primary {
+  border: none;
+  @include button-solid-shadow($btn-primary-border);
+}
+.btn-success {
+  @include button-solid-shadow($btn-success-border);
+}
+.btn-info {
+  @include button-solid-shadow($btn-info-border);
+}
+.btn-warning {
+  @include button-solid-shadow($btn-warning-border);
+}
+.btn-danger {
+  @include button-solid-shadow($btn-danger-border);
+}
+.btn-link {
+  @include button-solid-shadow(#fff);
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+// Bootstrap標準のボタンを大きくするクラス「.btn-lg」のスタイルをサイトに合わせて調整
+// キービジュアルのENTRYボタン、OUR WORKのSHOW MOREボタンなどで使用
+// --------------------------------------------------
+.btn-lg {
+  // _my-variables.scssに新たに追加した変数$btn-padding-large-verticalを使用
+  @include button-size($padding-xlarge-vertical, $padding-xlarge-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+
+
+// demo-btn-icon-round
+// --------------------------------------------------
+// 円形のボタン用のクラス
+// キービジュアル部分にあるコンテンツにジャンプするためのボタンなどに使用
+// --------------------------------------------------
+.demo-btn-icon-round {
+  @extend .img-circle;
+  color: $text-color;
+  display: inline-block;
+  border: 2px solid $text-color;
+  width: $base-size;
+  height: $base-size;
+  line-height: $base-size;
+  font-size: $font-size-base;
+  &:hover {
+    opacity: .7;
+  }
+
+  // color
+  &.is-white {
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  // size
+  &.btn-icon-round--lg {
+    width: $base-size * 2;
+    height: $base-size * 2;
+    line-height: $base-size * 2;
+    font-size: $font-size-base * 2;
+  }
+  &.btn-icon-round--md {
+    width: $base-size * 1.5;
+    height: $base-size * 1.5;
+    line-height: $base-size * 1.5;
+    font-size: $font-size-base * 1.5;
+  }
+  &.btn-icon-round--sm {
+    width: $base-size * 1;
+    height: $base-size * 1;
+    line-height: $base-size * 1;
+    font-size: $font-size-base * 1;
+  }
+  &.btn-icon-round--xs {
+    width: $base-size * 0.8;
+    height: $base-size * 0.8;
+    line-height: $base-size * 0.8;
+    font-size: $font-size-base * 0.8;
+  }
+}
+
+

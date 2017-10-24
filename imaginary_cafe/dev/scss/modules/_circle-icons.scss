@@ -1,0 +1,22 @@
+//
+// Image
+// --------------------------------------------------
+// 画像に関するクラス
+// --------------------------------------------------
+
+
+// demo-session-icon
+// -------------------------
+// SESSIONSのアイコン
+// -------------------------
+.demo-session-icon {
+  border: 3px solid $text-color;
+  width: $base-size * 5;
+  height: $base-size * 5;
+  line-height: $base-size * 5;
+  font-size: $font-size-base * 2.5;
+  text-align: center;
+  @media(min-width: $screen-sm-min) {
+    margin-bottom: 0;
+  }
+}
